@@ -23,7 +23,7 @@ const products = [
 ];
 
 app.get('/', (req, res) => {
-    res.status(200).send({ status: 200, message: 'Salve!' })
+    res.status(200).send({ status: 200, message: 'This service is upped' });
 });
 
 /**
