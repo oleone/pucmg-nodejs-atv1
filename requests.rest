@@ -1,0 +1,20 @@
+GET HTTP://localhost:3000/produtos
+
+###
+
+GET http://localhost:3000/produtos/2
+
+###
+
+POST http://localhost:3000/produtos
+content-type: application/json
+
+{
+    "descricao": "Paçoca de amendoim.",
+    "valor": 252.50,
+    "marca": "Paçokita"
+}
+
+###
+
+DELETE http://localhost:3000/produtos/d712e24d-32e0-4e8a-88a6-fead7a0a71fc
