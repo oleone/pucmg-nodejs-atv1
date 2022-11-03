@@ -12,6 +12,8 @@ const app = express();
 app.use(cors({ origin: '*' }));
 app.use(bodyParser.json());
 
+const PORT = process.env.PORT || 3000;
+
 const products = [
     { id: "d712e24d-32e0-4e8a-88a6-fead7a0a71fc", descricao: "Arroz parboilizado 5Kg", valor: 25.00, marca: "Tio João" },
     { id: "8715a3d4-23a9-4c6a-83cf-3a23a80f1f2a", descricao: "Maionese 250gr", valor: 7.20, marca: "Helmans" },
@@ -78,6 +80,6 @@ app.delete('/produtos/:id', (req, res) => {
     products.splice(index, 1);
 
     res.status(200).send(id);
-})
+});
 
-app.listen(3000);
+app.listen(PORT, () => console.log(`Listening in port ${PORT}`));
