@@ -66,6 +66,26 @@ app.post('/produtos', (req, res) => {
 });
 
 /**
+ * CREATE PRODUCT
+ */
+app.put('/produtos/:id', (req, res) => {
+    const id = req.params?.id;
+
+    if (!id) {
+        res.status(400).send({ statusCode: 400, message: 'Expected id param' })
+    }
+
+    let index = products.findIndex(product => product.id == id);
+
+    const payload = req.body;
+    products[index].descricao = payload.descricao || products[index].descricao;
+    products[index].marca = payload.marca || products[index].marca;
+    products[index].valor = payload.valor || products[index].valor;
+
+    res.status(200).send(payload.id);
+});
+
+/**
  * DELETE PRODUCT
  */
 app.delete('/produtos/:id', (req, res) => {
