@@ -1,0 +1,31 @@
+GET https://pucmg-njs-atv1.herokuapp.com/produtos
+
+###
+
+GET https://pucmg-njs-atv1.herokuapp.com/produtos/d712e24d-32e0-4e8a-88a6-fead7a0a71fc
+
+###
+
+POST https://pucmg-njs-atv1.herokuapp.com/produtos
+content-type: application/json
+
+{
+    "descricao": "Paçoca de amendoim.",
+    "valor": 25.8,
+    "marca": "Paçokita"
+}
+
+###
+
+PUT https://pucmg-njs-atv1.herokuapp.com/produtos/148c86e8-24fe-4cc7-9064-4d188f53d309
+content-type: application/json
+
+{
+    "descricao": "Paçoca de caramelo.",
+    "valor": 252.50,
+    "marca": "Moça"
+}
+
+###
+
+DELETE https://pucmg-njs-atv1.herokuapp.com/produtos/d712e24d-32e0-4e8a-88a6-fead7a0a71fc
